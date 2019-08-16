@@ -152,9 +152,10 @@ body{
 }
 .col__item {
 	
-	width: 33%;
+	width: 33.3333333%;
 	position: relative;
 	padding: 70px 70px;
+	flex-wrap: wrap;
 	
 }
 .col__title {
@@ -253,7 +254,7 @@ b {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	height: 100vh;
+	height: max-content;
 	min-height: 920px;
 	justify-content: center;
 	position: relative;
@@ -285,27 +286,21 @@ b {
 
 }
 
-.buttom {
-	
+.intro__button  {
 	text-align: center;
-	font-size: 25px;
-	font-weight: 600;
-	text-transform: uppercase;
-	color:#fff transparent;
-	margin: 60px 520px;
-	
-  
-   
-	border:2px solid #fff;
-	border-radius: 30px;
-	padding-bottom: 5px ;
+	margin: 60px 100px;
 
 }
+.intro__button a {
+	border: 2px solid #fff;
+	border-radius: 20px;
+	padding:5px 30px;
 
-.buttom:hover {
-	background: #009BCE;
-	opacity: 0.9;
 }
+.intro__button a:hover {
+	background: #0388B6;
+
+	}
 
 /*Reviews*/
 
@@ -319,16 +314,16 @@ b {
 
 .reviews__item {
 	
-	width: 33%;
+	width: 33.3333333%;
 	margin:50px 0;
 	background-color:#000000;
 	opacity: 0.7;
-	border-right: 1px solid #B1B1B1;
+	border: 1px solid #B1B1B1;
+	border-bottom:  1px solid #B1B1B1;
+	flex-wrap: wrap;
 	
 }
-.reviews__item:last-child {
-	border: none;
-}
+
 
 .reviews__title {
 	text-align: center;
@@ -352,6 +347,7 @@ b {
 }
 
 .reviews__text {
+
 	text-align: center;
 	color: #fff;
 	padding: 70px 90px;
@@ -373,19 +369,31 @@ b {
 
 /*Shop*/
 
+
 .shop__col {
+	width:100%;
 	display: flex;
+	flex-wrap: wrap;
 	height: 672px;
 	
 
 }
 
 .shop__col-1 {
+	width: 50%;
 	text-align: center;
 	background: #000000;
 	overflow: hidden;
 	
 	
+	
+}
+.shop__col-2 {
+	background:url(images/shop/shop1.jpg);
+	width: 50%;
+	text-align: center;
+	
+	overflow: hidden;
 	
 }
 
@@ -495,14 +503,35 @@ b {
 	text-align: center;
 	
 }
-.footer__icon .fab  {
+.footer__icon {
+	margin: 20px 125px;
+}
+.icon  {
 	font-size: 30px;
-	align-items: center;
-	margin-left: 20px;
+	align-items: right;
+	margin:20px 20px;
 	
 	
 
 }
+.icon:nth-of-type(2) {
+color:#EE1E4F;
+}
+.icon:nth-of-type(1) {
+	color: #0084FF;
+
+}
+.icon:nth-of-type(3) {
+	color: #EA1E00;
+
+}
+.icon:nth-of-type(4) {
+	color:#1DA1F3;
+}
+.icon:hover {
+	opacity: 0.5;
+}
+
 
 .copyright {
 	padding:20px 0 ;
@@ -513,4 +542,411 @@ b {
 }
 .copyright span {
 	color:red;
+}
+
+
+@media(max-width: 1230px) {
+   
+/*Intro*/
+
+.intro__title {
+	font-size: 120px;
+}
+.button {
+	margin: 60px 457px;
+
+}
+
+
+	
+}
+
+
+
+
+
+@media(max-width: 1024px) {
+
+	/*Intro*/
+
+	.button {
+		margin: 40px 440px;
+	}
+
+	/*Col*/
+
+	.col__title {
+		font-size: 11px;
+	}
+
+
+   /*Section*/
+
+   .section__col--text {
+   	margin: 30px 77px;
+   }
+
+
+   /*Shop*/
+
+   .shop__text {
+   	margin: 40px 60px;
+   }
+
+   /*Project*/
+
+   .project {
+   	margin: 30px 90px;
+   }
+
+   /*Footer*/
+
+   .footer__text {
+   	margin: 20px 171px;
+   }
+
+
+}
+
+@media(max-width: 990px) {
+    /*Intro*/
+    .intro {
+    	background-position: center;
+    }
+    .intro__suptitle {
+    	margin:0 240px;
+    }
+	/*Col*/
+
+	.col__title {
+    font-size: 10px;
+}   
+    /*Reviews*/
+
+    .reviews__item {
+    	margin: 25px 0;
+    }
+
+     
+}
+
+@media(max-width: 770px) {
+
+	/*Intro*/ 
+	.intro {
+		background-position: center;
+		
+	}
+	.button {
+		margin: 40px 290px;
+	}
+
+	/*Col*/
+
+	.col__item {
+		padding: 70px 40px;
+	}
+
+	/*Reviews*/
+
+	.reviews__text {
+		padding: 70px 45px;
+	}
+
+	/*Section*/
+
+	.section--text {
+		margin: 80px 100px;
+
+	}
+
+	.intro__suptitle {
+		margin: 0 180px;
+		margin-top: -90px;
+	}
+
+	.intro__title {
+		margin-top: 50px;
+	}
+
+	/*Project*/
+
+	.project__item {
+		margin:30px 65px;
+	}
+
+	/*Footer*/
+
+	.footer__item {
+		margin: 40px 0;
+	}
+}
+@media(max-width: 675px) {
+    /*Nav*/
+
+    .nav__link {
+    	padding: 10px 10px;
+    }
+
+    /*Col*/
+    .col__title {
+    font-size: 9px;
+}
+
+    .col__item {
+    	padding: 70px 15px;
+    }
+
+    /*Section*/
+
+    .section__title {
+    	margin-top: 50px;
+    }
+
+    /*Reviews*/
+
+    .reviews__suptitle {
+    	padding: 15px 100px;
+    }
+
+    /*Project*/
+
+    .project__item {
+    	margin: 30px 0px;
+    }
+
+    .footer__icon {
+    	margin: 20px 40px;
+    }
+
+    .shop__col {
+    	height: 570px;
+    }
+	.shop__col-2 {
+		background-position: center;
+	}
+	.section__col--text {
+    margin: 30px 15px;
+}
+.section--reviews {
+	background-position: right;
+}
+}
+
+
+@media(max-width: 575px) {
+	/*Nav*/
+
+	.nav__link {
+		padding: 10px 0;
+		font-size: 13px;
+	}
+
+	/*Intro*/
+
+	.intro__title {
+		font-size: 90px;
+		margin-top: 220px;
+	}
+
+	.intro__suptitle {
+		margin: 0 15px;
+		margin-top: 0px;
+	}
+
+	/*Col*/
+	.col__title {
+		font-size: 9px;
+	}
+
+	.col__item {
+		padding: 25px 5px;
+	}
+
+	/*Reviews*/
+	.reviews {
+		margin: 5px;
+	}
+
+	.section--reviews {
+		height: auto;
+	}
+	.section__suptitle {
+		margin-bottom: 70px;
+	}
+
+	.section__suptitle2 {
+		margin: 50px 90px;
+		margin-bottom: 60px;
+	}
+
+	.section__col {
+		margin: 70px 0;
+	}
+	.section__col--title { 
+		font-size: 20px;
+	}
+
+	.section__col--text {
+    margin: 30px 10px;
+}
+.section--text {
+    margin: 15px 36px;
+}
+
+
+	.section__title h1 {
+		margin-top: 50px;
+	}
+
+	.reviews__title {
+		margin-top: 40px;
+	}
+
+	.reviews__suptitle {
+		padding: 0;
+	}
+
+
+	.reviews__item {
+		margin: 0;
+	}
+
+	.reviews__text {
+		font-size: 12px;
+		padding: 30px 0px;
+	}
+	.reviews__company {
+		font-size: 14px;
+	}
+
+   .reviews__name {
+   	font-size: 14px;
+   }
+
+   .col1--title {
+   	margin-top: 100px;
+   	font-size: 30px;
+   } 
+   .shop__text {
+   	margin: 40px 17px;
+   }
+
+   /*Tickets*/
+
+   .tickets__suptitle {
+   	margin: 10px -35px;
+   }
+
+   .tickets__item {
+   	margin: 180px 110px;
+   }
+
+
+.project__text {
+	font-size: 14px;
+    
+}
+.project {
+    margin: 30px 30px;
+    }
+
+.footer__text {
+	margin: 20px 90px;
+}
+}
+@media(max-width: 320px) {
+
+	/*Intro*/
+
+	.intro__button {
+		margin: 70px 90px;
+	}
+
+	/*Logo*/
+
+	.logo, a {
+		font-size: 13px;
+	}
+
+	.logo__content {
+    padding: 10px 5px;
+}
+
+/*Nav*/
+
+    .nav__link {
+    	font-size: 12px;
+    }
+
+    /*Section*/
+
+    .section__suptitle { 
+    	font-size: 14px;
+    }
+
+    .reviews__name {
+    font-size: 12px;
+}
+.reviews__name,p {
+    font-size: 12px;
+}
+
+.section__title2 h1 {
+	font-size: 21px;
+	}
+
+	.section__suptitle2 {
+       margin: 50px 39px;
+	}
+
+	.section__col--text {
+		font-size: 14px;
+	}
+
+	.section--text {
+		font-size: 14px;
+	}
+
+	.col1--title {
+    
+    font-size: 24px;
+}
+
+.shop__text {
+	font-size: 14px;
+}
+
+.tickets__item {
+    margin: 180px 135px;
+}
+
+.project {
+    margin: 30px 15px;
+}
+
+.project__text {
+    font-size: 12px; }
+
+    .project__suptitle {
+    	font-size: 18px;
+    }
+
+    .project__title {
+    	font-size: 11px;
+    }
+
+    .footer__text {
+    	margin:20px 20px;
+    }
+
+    .footer__icon {
+    margin: 20px 13px;
+}
+
+
+
+
+
+
 }
